@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&family=Handlee&family=Jost:wght@300&family=Montserrat&display=swap');
+body{
+    margin: 0px;
+}
+::-webkit-scrollbar{
+    width: 12px;
+    background: #D9D8D8;
+    opacity: 0.6;
+}
+::-webkit-scrollbar-track{
+    border:none;
+}
+::-webkit-scrollbar-thumb{
+    background: #8B8A8A;
+}
+hr{
+    border: none;
+    height: 1px;
+    width: 100%;
+    background: #4A3F68;
+    
+}
+.container{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    color: ;
+    
+}
+.left{
+    width: 22%;
+    background-image: linear-gradient(100deg,#108FF5 29%,#6A6CA6);    
+}
+.right{
+    width: 78%;
+    background: #873600 ;
+    color: #ECF0F1;
+}
+ul{
+    list-style: none;
+    cursor: pointer;
+}
+.searchbar{
+    margin-left: 25px;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 3px;
+    width: 15px;    
+}
+.searchbar:hover{
+    transform: scale(1.2);
+    background: #6A97FE;
+}
+.navbar{
+    
+    overflow: hidden;  
+    background: #AEB6BF;
+}
+.navbar ul{ 
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+.navbar ul li{
+    padding: 3px 28px;
+    transition: 0.3s;
+    line-height: 2.5em; 
+    background: 
+}
+.navbar ul li:hover{
+    background: #F8F9F9;
+    color: #333;
+}
+.songs-list ul li{
+    line-height: 30px;
+    margin: 1px 20px 1px 0px;
+    letter-spacing: 1px;
+    font-family: 'Comic Neue', cursive;
+    padding: 3px 0px 3px 45px;
+    cursor: pointer;
+    transition: 0.4s;
+    border: 1px solid #333A23;
+    display: flex;
+    overflow: hidden;
+    background: #BB540F;
+}
+.songs-list ul li:hover{
+    background: #B9770E;
+    border: 1px solid #B9770E;
+    color: #fff;
+}
+.play-pause{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    
+    
+}
+.play-pause i{
+    margin-right: 10px;
+    transition-timing-function: linear;
+    transition-duration: 0.2s;
+}
+.play-pause i:hover{
+    transform: scale(1.7);
+}
+.options ul{
+    transform: translate(-16px);
+}
+.options ul li{
+    line-height: 30px;
+    margin-bottom: 2px;
+    padding-left: 30px;    
+}
+.options ul li:hover{
+    background: #6A97FE;
+}
+.settings span{
+    margin-left: 20px;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.settings{
+    position: relative;
+    top: 40px;    
+    padding: 12px 6px;
+}
+.settings:hover{
+    background: #6A97FE;
+}
+h1{
+    font-family: 'Jost', sans-serif;
+    letter-spacing: 3px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+h3{
+  font-family: 'Jost', sans-serif;
+    letter-spacing: 3px;
+    margin: 0px;
+    padding: 19px 20px;
+    cursor: pointer; 
+    font-size: 1.6em;
+    /*background-image: linear-gradient(-95deg,#3C8ACA 1%,#4BAAF7,#4BAAF7);*/
+}
