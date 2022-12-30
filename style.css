@@ -20,57 +20,9 @@ body {
 ::-webkit-scrollbar-thumb {
   background: #8b8a8a;
 }
-hr {
-  border: none;
-  height: 1px;
-  width: 100%;
-  background: #4a3f68;
-}
-.container {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-}
-.left {
-  width: 32vw;
-  background: #52006a;
-  color: #ffffff;
-  position: relative;
-}
-.left .icon_list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .right {
   width: 100vw;
-  /* color: #ecf0f1; */
-  /* background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
-  background: rgb(32, 32, 32);
 }
-/* ul {
-  list-style: none;
-}
-ul li {
-  cursor: pointer;
-} */
-/* .searchbar {
-  margin-left: 25px;
-  border: 1px solid black;
-  border-radius: 3px;
-  padding: 3px;
-  width: 15px;
-}
-.searchbar:hover {
-  transform: scale(1.2);
-  background: #6a97fe;
-}
-#side-menu {
-  position: absolute;
-  top: 32;
-  right: 32;
-  cursor: pointer;
-} */
 .navbar {
   overflow: hidden;
   display: flex;
@@ -96,49 +48,6 @@ ul li {
   background: #f8f9f9;
   color: #333;
 }
-.songs-list {
-  display: flex;
-  justify-content: space-around;
-  padding: 24px 0;
-}
-.songs-list ul {
-  /* width: 60vw; */
-  margin: 0;
-}
-.songs-list div {
-  width: 38vw;
-}
-.songs-list ul li {
-  line-height: 30px;
-  margin: 4px 23px 16px 0;
-  letter-spacing: 1px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 24px;
-  padding: 24px 40px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: 0.4s;
-  /* border: 1px solid rgba(255, 118, 0); */
-  display: flex;
-  overflow: hidden;
-  /* background: #bb540f; */
-  background-color: rgba(255, 118, 0);
-}
-.songs-list ul li:hover {
-  background: #ffa900;
-  /* background: #b9770e; */
-  /* border: 1px solid #ffa900; */
-  /* border: 1px solid #b9770e; */
-  color: #fff;
-}
-
-.songs-list ul li i {
-  margin: auto 0;
-}
-
-.songs-list ul li span {
-  margin-left: 10px;
-}
 .play-pause {
   display: flex;
   justify-content: center;
@@ -154,53 +63,6 @@ ul li {
 .play-pause i:hover {
   transform: scale(1.7);
 }
-.options ul {
-  transform: translate(-16px);
-}
-.options ul li {
-  display: flex;
-  overflow: hidden;
-  font-family: "Montserrat", sans-serif;
-  line-height: 30px;
-  margin-bottom: 2px;
-  padding-left: 30px;
-}
-.options ul li:hover {
-  background: #6a97fe;
-}
-.options ul li i {
-  padding: 0 20px 0 0;
-}
-.settings > span {
-  margin-left: 20px;
-  font-size: 1.2em;
-  font-family: "Montserrat", sans-serif;
-  letter-spacing: 1px;
-  cursor: pointer;
-}
-.settings {
-  position: relative;
-  top: 40px;
-  padding: 12px 6px;
-}
-.settings:hover {
-  background: #6a97fe;
-}
-/* h3 {
-  font-family: "Jost", sans-serif;
-  letter-spacing: 3px;
-  margin: 0px;
-  padding: 19px 20px;
-  cursor: pointer;
-  font-size: 1.6em;
-} */
-
-
-/* 
-
-
-
-*/
 
 ul {
   list-style: none;
@@ -223,7 +85,6 @@ h1 {
 }
 
 .all-songs {
-  /* padding: 0 4px 0 0; */
   width: 48vw;
   height: 100%;
   overflow-y: scroll;
@@ -239,15 +100,13 @@ h1 {
   font-weight: bold;
   padding: 20px 40px;
   transition: 0.4s;
-  background-color: rgb(255, 86, 86);
+  background-color: rgb(241, 241, 241);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .all-songs li:hover {
-  background: #ffa900;
+  background-color: rgb(255, 145, 0);
   font-weight: bolder;
-  /* background: #b9770e; */
-  /* border: 1px solid #ffa900; */
-  /* border: 1px solid #b9770e; */
   color: #fff;
 }
 
@@ -256,6 +115,7 @@ h1 {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .audio-container {
@@ -263,10 +123,6 @@ h1 {
   position: absolute;
   padding: 11px 16px;
   background-color: #4a3f68;
-}
-
-.audio-container > audio {
-  /* transform: scale(1.2); */
 }
 
 .audio-container > span {
@@ -315,7 +171,6 @@ h1 {
 }
 
 .song-text-info {
-  /* border: 2px solid white; */
   display: flex;
   flex-direction: column;
   color: white;
@@ -324,7 +179,6 @@ h1 {
 }
 
 .song-text-info > h3 {
-  /* border: 2px solid white; */
   line-height: 8px;
   padding: 19px 0px;
   font-size: 1.6em;
@@ -347,12 +201,13 @@ h1 {
   background-color: #ccc;
   border-radius: 10px;
   position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #progress-bar {
   width: 0;
   height: 100%;
-  background-color: #333;
+  background-color: rgb(255, 0, 0);
   border-radius: 10px;
   transition: width 0.5s;
 }
