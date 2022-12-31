@@ -2,6 +2,8 @@
 
 A music player built with HTML, CSS, and JavaScript, similar to the Groove music player.
 
+![Music Player](./Images/homepage.jpg)
+
 ## Features
 
 - Toggle between 15 songs
