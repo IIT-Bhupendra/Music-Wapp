@@ -2,7 +2,7 @@
 
 A music player built with HTML, CSS, and JavaScript, similar to the Groove music player.
 
-![Music Player](./Images/homepage.jpg)
+![Music Player](./Images/homepage.png)
 
 ## Features
 
