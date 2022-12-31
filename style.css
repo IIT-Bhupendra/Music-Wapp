@@ -2,12 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-}
-
-body {
-  max-height: 100vh;
-  max-width: 100vw;
-  overflow-x: hidden;
+  box-sizing: border-box;
 }
 ::-webkit-scrollbar {
   width: 4px;
@@ -20,9 +15,22 @@ body {
 ::-webkit-scrollbar-thumb {
   background: #8b8a8a;
 }
-.right {
-  width: 100vw;
+
+/* CSS applicable to all tags */
+body {
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+ul {
+  list-style: none;
+}
+li {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* CSS for navbar and related elements */
 .navbar {
   overflow: hidden;
   display: flex;
@@ -31,13 +39,19 @@ body {
   background: #c1cede;
   box-shadow: rgba(139, 139, 139, 0.16) 0px 1px 4px;
 }
+.navbar > h1 {
+  font-family: "Jost", sans-serif;
+  letter-spacing: 3px;
+  cursor: pointer;
+  padding: 48px 24px;
+}
 .navbar ul {
   display: flex;
   font-family: "Montserrat", sans-serif;
   margin: 0;
 }
 .navbar ul li {
-  padding: 10px 40px;
+  padding: 10px 24px;
   transition: 0.3s;
   line-height: 2.5em;
   font-weight: bolder;
@@ -48,48 +62,25 @@ body {
   background: #f8f9f9;
   color: #333;
 }
-.play-pause {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 10px;
-}
-.play-pause i {
-  margin-right: 10px;
-  transition-timing-function: linear;
-  transition-duration: 0.2s;
-  transform: scale(1.5);
-}
-.play-pause i:hover {
-  transform: scale(1.7);
-}
 
-ul {
-  list-style: none;
-}
-li {
-  text-decoration: none;
-  cursor: pointer;
-}
-h1 {
-  font-family: "Jost", sans-serif;
-  letter-spacing: 3px;
-  cursor: pointer;
-  padding: 12px 24px;
-}
+/* CSS for all songs list & curr song image */
 .middle-container {
   display: flex;
+  gap: 10px;
   justify-content: space-between;
   padding: 24px;
-  height: 69vh;
+  min-height: 75.4vh;
+  flex-grow: 1;
+  background: linear-gradient(90deg,#0073cf 1.12%,#c05576 116.74%);
 }
-
+.songs-here {
+  flex: 1;
+}
 .all-songs {
   width: 48vw;
   height: 100%;
   overflow-y: scroll;
 }
-
 .all-songs li {
   display: flex;
   line-height: 30px;
@@ -103,28 +94,27 @@ h1 {
   background-color: rgb(241, 241, 241);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
 .all-songs li:hover {
   background-color: rgb(255, 145, 0);
   font-weight: bolder;
   color: #fff;
 }
-
+.song-image-container {
+  flex: 1;
+}
 .song-image {
-  width: 48vw;
+  width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
+/* CSS for the audio controllers */
 .audio-container {
-  width: 100vw;
-  position: absolute;
-  padding: 11px 16px;
+  padding: 11px 24px;
   background-color: #4a3f68;
 }
-
 .audio-container > span {
   margin: auto 0;
   border: 2px solid black;
@@ -132,12 +122,58 @@ h1 {
   font-weight: bold;
 }
 
+/* CSS for the progress bar and its elements */
+#progress-container {
+  height: 8px;
+  background-color: #ccc;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+#progress-bar {
+  width: 0;
+  height: 100%;
+  background-color: rgb(255, 0, 0);
+  border-radius: 10px;
+  transition: width 0.5s;
+}
+
 .audio-tools {
   display: flex;
   justify-content: space-between;
-  align-items: center;  
+  align-items: end;  
+}
+.curr-song {
+  margin-top: 8px;
+  display: flex;
+  align-items: end;
+  gap: 12px;
+  width: 36vw;
+}
+.song-thumb {
+  width: 10vh;
+  height: 10vh;
+  object-fit: cover;
+}
+.song-text-info {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-family: "Jost", sans-serif;
+  letter-spacing: 2px;
+}
+.song-text-info > h3 {
+  line-height: 8px;
+  padding: 19px 0px;
+  font-size: 1.6em;
+  cursor: pointer;
+}
+.song-text-info > h5 {
+  font-size: 0.8em;
+  font-weight: lighter;
 }
 
+/* Tools to control current song */
 .main-controllers {
   display: flex;
   align-items: center;
@@ -148,72 +184,17 @@ h1 {
 .main-controllers > i {
   cursor: pointer;
 }
-
-.other-controllers {
-  display: flex;
-  padding-right: 28px;
-  flex-direction: row-reverse;
-  width: 36vw;
-}
-
-.curr-song {
-  margin-top: 8px;
-  display: flex;
-  align-items: end;
-  gap: 12px;
-  width: 36vw;
-}
-
-.song-thumb {
-  width: 10vh;
-  height: 10vh;
-  object-fit: cover;
-}
-
-.song-text-info {
-  display: flex;
-  flex-direction: column;
-  color: white;
-  font-family: "Jost", sans-serif;
-  letter-spacing: 2px;
-}
-
-.song-text-info > h3 {
-  line-height: 8px;
-  padding: 19px 0px;
-  font-size: 1.6em;
-  cursor: pointer;
-}
-
-.song-text-info > h5 {
-  font-size: 0.8em;
-  font-weight: lighter;
-}
-
 .play-pause-btn {
   margin: auto 0;
   cursor: pointer;
 }
-
-#progress-container {
-  width: 98vw;
-  height: 8px;
-  background-color: #ccc;
-  border-radius: 10px;
-  position: relative;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.other-controllers {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 36vw;
 }
-
-#progress-bar {
-  width: 0;
-  height: 100%;
-  background-color: rgb(255, 0, 0);
-  border-radius: 10px;
-  transition: width 0.5s;
-}
-
 #timestamp {
-  font-size: 2em;
+  font-size: 2.4em;
   color: white;
   font-family: "Jost", sans-serif;
 }
