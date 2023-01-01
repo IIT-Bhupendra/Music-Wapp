@@ -1,6 +1,14 @@
-# Music Player
+# Mint Music
 
-A music player built with HTML, CSS, and JavaScript, similar to the Groove music player.
+Welcome to the Mint Music Player built with HTML, CSS, and JavaScript!
+
+This music player is similar to the popular Groove music player and allows you to play music from a selection of 15 songs. The user interface is beautiful and easy to use, making it a pleasure to listen to your favorite tunes.
+
+To get started, simply select a song from the list and click the play button. You can also use the pause and progress bar to seek to a specific point in the song.
+
+I hope you enjoy using my music player and discovering new music! If you have any questions or feedback, please don't hesitate to contact me.
+
+![Music Player](./Images/homepage-modified.png)
 
 ## Features
 
